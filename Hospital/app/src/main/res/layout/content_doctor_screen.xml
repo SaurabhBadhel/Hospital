@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:background="#E6EDFA"
+    tools:showIn="@layout/app_bar_main">
+
+
+    <fragment
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        android:text=""
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/mobile_navigation"
+        >
+
+
+
+    </fragment>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btnPrint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:text="Print"
+                android:background="#5EA4FA"
+                android:layout_marginBottom="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/remark"
+                android:layout_width="512dp"
+                android:layout_height="114dp"
+                android:layout_marginStart="26dp"
+                android:layout_marginLeft="26dp"
+                android:layout_marginEnd="63dp"
+                android:layout_marginRight="63dp"
+                android:layout_marginBottom="88dp"
+                android:background="#fff"
+                android:ems="10"
+                android:hint="Doctor Notes"
+                android:inputType="textMultiLine"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/cliName"
+                android:layout_width="603dp"
+                android:layout_height="57dp"
+                android:hint="Prescription"
+                android:textAlignment="center"
+                android:textSize="30dp"
+                android:background="#5EA4FA"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.666"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/patientName"
+                android:layout_width="163dp"
+                android:layout_height="28dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="21dp"
+                android:paddingStart="10dp"
+                android:layout_marginRight="21dp"
+                android:hint="Patient Name"
+                android:textAlignment="center"
+                android:textColorHint="#000"
+                android:textSize="22dp"
+                app:layout_constraintEnd_toStartOf="@+id/editText"
+                app:layout_constraintTop_toBottomOf="@+id/cliName" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="35dp"
+                android:layout_height="26dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginBottom="28dp"
+                android:background="#fff"
+                android:gravity="center"
+                android:text="Age"
+                android:textColor="#000"
+                app:layout_constraintBottom_toTopOf="@+id/cardView"
+                app:layout_constraintEnd_toStartOf="@+id/age" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="41dp"
+                android:layout_height="27dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="24dp"
+                android:background="#fff"
+                android:gravity="center"
+
+                android:text="Height"
+                android:textColor="#000"
+                app:layout_constraintBottom_toTopOf="@+id/cardView"
+                app:layout_constraintEnd_toStartOf="@+id/height" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="49dp"
+                android:layout_height="29dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+
+                android:layout_marginBottom="28dp"
+
+                android:background="#fff"
+                android:gravity="center"
+                android:text="Weight"
+                android:textColor="#000"
+                app:layout_constraintBottom_toTopOf="@+id/cardView"
+                app:layout_constraintEnd_toStartOf="@+id/weight" />
+
+            <EditText
+                android:id="@+id/age"
+                android:layout_width="59dp"
+                android:layout_height="43dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+
+                android:layout_marginBottom="24dp"
+                android:background="#fff"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:textColor="#000"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/cardView"
+                app:layout_constraintEnd_toStartOf="@+id/textView9" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="49dp"
+                android:layout_height="29dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginBottom="20dp"
+                android:background="#fff"
+                android:gravity="center"
+                android:text="BP"
+                android:textColor="#000"
+
+                app:layout_constraintBottom_toTopOf="@+id/cardView"
+                app:layout_constraintEnd_toStartOf="@+id/bp" />
+
+
+            <EditText
+                android:id="@+id/bp"
+                android:layout_width="59dp"
+                android:layout_height="43dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:gravity="center"
+
+                android:layout_marginBottom="20dp"
+                android:background="#fff"
+                android:ems="10"
+                android:inputType="date"
+                android:textColor="#000"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/cardView"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <EditText
+                android:id="@+id/height"
+                android:layout_width="74dp"
+                android:layout_height="43dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center"
+
+                android:layout_marginBottom="20dp"
+                android:background="#fff"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:textColor="#000"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/cardView"
+                app:layout_constraintEnd_toStartOf="@+id/textView8" />
+
+            <EditText
+                android:id="@+id/weight"
+                android:layout_width="65dp"
+                android:layout_height="43dp"
+                android:gravity="center"
+
+                android:layout_marginEnd="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginBottom="24dp"
+                android:background="#fff"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:textColor="#000"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/cardView"
+                app:layout_constraintEnd_toStartOf="@+id/textView7" />
+
+            <Button
+                android:id="@+id/sendPrescription"
+                android:layout_width="114dp"
+                android:layout_height="53dp"
+                android:layout_marginStart="471dp"
+                android:layout_marginLeft="471dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="14dp"
+                android:text="Send"
+                android:textSize="25dp"
+                android:background="#5EA4FA"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="145dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="88dp"
+                android:layout_marginEnd="24dp"
+                android:gravity="center"
+                android:layout_marginRight="24dp"
+                android:background="#fff"
+                android:ems="10"
+                android:hint="Date"
+                android:inputType="date"
+                android:textColor="#000"
+                android:textSize="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="220dp"
+                android:textColor="#000"
+
+                android:layout_height="43dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="48dp"
+                android:layout_marginRight="48dp"
+                android:background="#fff"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toStartOf="@+id/date"
+                app:layout_constraintTop_toBottomOf="@+id/cliName" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="596dp"
+                android:layout_height="311dp"
+                android:layout_marginBottom="88dp"
+                android:background="#5EA4FA"
+                app:layout_constraintBottom_toTopOf="@+id/remark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#8EBFFA"
+                    >
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="593dp"
+                        android:layout_height="71dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#5EA4FA">
+
+                            <TextView
+                                android:id="@+id/e"
+                                android:layout_width="39dp"
+                                android:layout_height="27dp"
+                                android:layout_marginEnd="28dp"
+                                android:layout_marginRight="28dp"
+                                android:layout_marginBottom="15dp"
+                                android:text="ES"
+                                android:textColor="#000"
+                                android:textSize="22dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/d" />
+
+                            <TextView
+                                android:id="@+id/d"
+                                android:layout_width="53dp"
+                                android:layout_height="27dp"
+                                android:layout_marginEnd="3dp"
+                                android:layout_marginRight="3dp"
+                                android:layout_marginBottom="15dp"
+                                android:text="DAYS"
+                                android:textColor="#000"
+                                android:textSize="22dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent" />
+
+                            <TextView
+                                android:id="@+id/textView"
+                                android:layout_width="163dp"
+                                android:layout_height="37dp"
+                                android:layout_marginEnd="46dp"
+                                android:layout_marginRight="40dp"
+                                android:layout_marginBottom="15dp"
+                                android:text="Medicine Name"
+                                android:textSize="22dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/a" />
+
+                            <TextView
+                                android:id="@+id/c"
+                                android:layout_width="24dp"
+                                android:layout_height="31dp"
+                                android:layout_marginEnd="33dp"
+                                android:layout_marginRight="33dp"
+                                android:layout_marginBottom="15dp"
+                                android:text="N"
+                                android:textColor="#000"
+                                android:textSize="22dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/e" />
+
+                            <TextView
+                                android:id="@+id/b"
+                                android:layout_width="24dp"
+                                android:layout_height="31dp"
+                                android:layout_marginEnd="31dp"
+                                android:layout_marginRight="31dp"
+                                android:layout_marginBottom="15dp"
+                                android:text="E"
+                                android:textColor="#000"
+                                android:textSize="22dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/c" />
+
+                            <TextView
+                                android:id="@+id/a"
+                                android:layout_width="24dp"
+                                android:layout_height="31dp"
+                                android:layout_marginEnd="37dp"
+                                android:layout_marginRight="37dp"
+                                android:layout_marginBottom="15dp"
+                                android:text="M"
+                                android:textColor="#000"
+                                android:textSize="22dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/textView2" />
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="24dp"
+                                android:layout_height="31dp"
+                                android:layout_marginEnd="46dp"
+                                android:layout_marginRight="46dp"
+                                android:layout_marginBottom="15dp"
+                                android:text="A"
+                                android:textColor="#000"
+                                android:textSize="22dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/b" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                    <Switch
+                        android:id="@+id/checkMor1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="19dp"
+                        android:layout_marginRight="19dp"
+                        android:layout_marginBottom="40dp"
+                        android:onClick="selectItem1"
+                        android:text=""
+                        app:layout_constraintBottom_toTopOf="@+id/checkMor2"
+                        app:layout_constraintEnd_toStartOf="@+id/checkAft1" />
+
+                    <Switch
+                        android:id="@+id/checkAft1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="40dp"
+                        android:onClick="selectItem1"
+                        android:text=""
+
+                        app:layout_constraintBottom_toTopOf="@+id/checkAft2"
+                        app:layout_constraintEnd_toStartOf="@+id/checkEve1" />
+
+                    <EditText
+                        android:id="@+id/medName1"
+                        android:layout_width="190dp"
+                        android:layout_height="42dp"
+
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginEnd="18dp"
+                        android:layout_marginRight="18dp"
+                        android:layout_marginBottom="29dp"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        app:layout_constraintBottom_toTopOf="@+id/medName2"
+                        app:layout_constraintEnd_toStartOf="@+id/checkMor1"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <EditText
+                        android:id="@+id/Duration1"
+                        android:layout_width="69dp"
+                        android:layout_height="46dp"
+                        android:layout_marginBottom="26dp"
+                        android:ems="10"
+                        android:hint="Days"
+                        android:inputType="number"
+                        app:layout_constraintBottom_toTopOf="@+id/Duration2"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <Switch
+                        android:id="@+id/checkEve1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="18dp"
+                        android:layout_marginRight="18dp"
+                        android:layout_marginBottom="40dp"
+                        android:onClick="selectItem1"
+
+                        app:layout_constraintBottom_toTopOf="@+id/checkEve2"
+                        app:layout_constraintEnd_toStartOf="@+id/checkNight1" />
+
+                    <Switch
+                        android:id="@+id/checkNight1"
+                        android:layout_width="52dp"
+                        android:layout_height="28dp"
+                        android:layout_marginEnd="17dp"
+                        android:layout_marginRight="17dp"
+                        android:layout_marginBottom="38dp"
+
+                        android:onClick="selectItem1"
+                        app:layout_constraintBottom_toTopOf="@+id/checkNight2"
+                        app:layout_constraintEnd_toStartOf="@+id/checkStomatch1" />
+
+                    <Switch
+                        android:id="@+id/checkStomatch1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="18dp"
+                        android:layout_marginRight="18dp"
+                        android:layout_marginBottom="39dp"
+                        android:onClick="selectItem1"
+
+                        app:layout_constraintBottom_toTopOf="@+id/checkStomatch2"
+                        app:layout_constraintEnd_toStartOf="@+id/Duration1" />
+
+                    <EditText
+                        android:id="@+id/medName2"
+                        android:layout_width="192dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="33dp"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        app:layout_constraintBottom_toTopOf="@+id/medName3"
+                        app:layout_constraintEnd_toStartOf="@+id/checkMor2"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <Switch
+                        android:id="@+id/checkMor2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="19dp"
+                        android:layout_marginRight="19dp"
+                        android:layout_marginBottom="54dp"
+                        android:onClick="selectItem2"
+                        android:text=""
+
+                        app:layout_constraintBottom_toTopOf="@+id/checkMor3"
+                        app:layout_constraintEnd_toStartOf="@+id/checkAft2" />
+
+                    <Switch
+                        android:id="@+id/checkAft2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="54dp"
+                        android:onClick="selectItem2"
+                        android:text=""
+
+                        app:layout_constraintBottom_toTopOf="@+id/checkAft3"
+                        app:layout_constraintEnd_toStartOf="@+id/checkEve2" />
+
+                    <Switch
+                        android:id="@+id/checkEve2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="54dp"
+
+                        android:onClick="selectItem2"
+                        app:layout_constraintBottom_toTopOf="@+id/checkEve3"
+                        app:layout_constraintEnd_toStartOf="@+id/checkNight2" />
+
+                    <Switch
+                        android:id="@+id/checkNight2"
+                        android:layout_width="52dp"
+                        android:layout_height="28dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="53dp"
+                        android:onClick="selectItem2"
+
+                        app:layout_constraintBottom_toTopOf="@+id/checkNight3"
+                        app:layout_constraintEnd_toStartOf="@+id/checkStomatch2" />
+
+                    <Switch
+                        android:id="@+id/checkStomatch2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="18dp"
+                        android:layout_marginRight="18dp"
+                        android:layout_marginBottom="54dp"
+                        android:onClick="selectItem2"
+
+                        app:layout_constraintBottom_toTopOf="@+id/checkStomatch3"
+                        app:layout_constraintEnd_toStartOf="@+id/Duration2" />
+
+                    <EditText
+                        android:id="@+id/Duration2"
+                        android:layout_width="69dp"
+                        android:layout_height="46dp"
+                        android:layout_marginBottom="33dp"
+                        android:ems="10"
+                        android:hint="Days"
+                        android:inputType="number"
+                        app:layout_constraintBottom_toTopOf="@+id/Duration3"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <EditText
+                        android:id="@+id/medName3"
+                        android:layout_width="191dp"
+                        android:layout_height="47dp"
+
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginEnd="17dp"
+                        android:layout_marginRight="17dp"
+                        android:layout_marginBottom="34dp"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/checkMor3"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+
+                    <Switch
+                        android:id="@+id/checkMor3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="19dp"
+                        android:layout_marginRight="19dp"
+                        android:layout_marginBottom="45dp"
+                        android:onClick="selectItem3"
+                        android:text=""
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/checkAft3" />
+
+                    <Switch
+                        android:id="@+id/checkAft3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="45dp"
+                        android:onClick="selectItem3"
+                        android:text=""
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/checkEve3" />
+
+                    <Switch
+                        android:id="@+id/checkEve3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="18dp"
+                        android:layout_marginRight="18dp"
+                        android:layout_marginBottom="45dp"
+                        android:onClick="selectItem3"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/checkNight3" />
+
+                    <Switch
+                        android:id="@+id/checkNight3"
+                        android:layout_width="52dp"
+                        android:layout_height="28dp"
+                        android:layout_marginEnd="17dp"
+                        android:layout_marginRight="17dp"
+                        android:layout_marginBottom="45dp"
+                        android:onClick="selectItem3"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/checkStomatch3" />
+
+                    <Switch
+                        android:id="@+id/checkStomatch3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="45dp"
+                        android:onClick="selectItem3"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/Duration3" />
+
+                    <EditText
+                        android:id="@+id/Duration3"
+                        android:layout_width="69dp"
+                        android:layout_height="46dp"
+                        android:layout_marginBottom="41dp"
+                        android:ems="10"
+                        android:hint="Days"
+                        android:inputType="number"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
